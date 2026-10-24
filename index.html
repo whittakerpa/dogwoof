@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>dogwoof.ai</title>
+  <meta name="description" content="dogwoof.ai is an AI lab building Story OS for true stories, across virtual reality, augmented reality and new AI-native forms.">
+  <style>
+    :root {
+      --bg: #faf7f2;
+      --fg: #191714;
+      --muted: #6e6860;
+      --rule: #e2dbd0;
+      --accent: #c2532b;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14120f;
+        --fg: #f1ece4;
+        --muted: #a39b90;
+        --rule: #2c2823;
+        --accent: #e8794f;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 24px;
+    }
+    main { max-width: 680px; margin: 0 auto; width: 100%; }
+    .eyebrow { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px; }
+    h1 {
+      font-family: ui-serif, Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: clamp(2.6rem, 9vw, 4.4rem);
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin: 0 0 24px;
+    }
+    h1 .dot { color: var(--accent); }
+    p.lede { font-size: 1.25rem; line-height: 1.5; margin: 0 0 12px; }
+    p.sub { font-size: 1.05rem; line-height: 1.55; color: var(--muted); margin: 0 0 40px; }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 0 0 24px; }
+    .contact { font-size: 0.95rem; color: var(--muted); line-height: 1.6; }
+    .contact a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+    footer { max-width: 680px; margin: 0 auto; width: 100%; padding: 48px 0 32px; font-size: 0.8rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">AI lab</p>
+    <h1>dogwoof<span class="dot">.</span>ai</h1>
+    <p class="lede">We are building Story OS: the AI foundation for how true stories will be created and experienced next.</p>
+    <p class="sub">Stories, virtual reality, augmented reality and new AI-native forms. One focus: an AI lab that empowers storytellers.</p>
+    <hr>
+    <p class="contact">From Andy Whittaker &middot; <a href="mailto:andywhittaker@gmail.com">andywhittaker@gmail.com</a></p>
+  </main>
+  <footer>&copy; <span id="y">2026</span> dogwoof.ai</footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
