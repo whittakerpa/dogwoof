@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Keep one footer across every page.
+"""Keep one footer across every page, and the DogwoofAI name consistent.
 
 The footer lives in partials/footer.html. The site has no build step, so this
 script copies it into each page.
@@ -16,6 +16,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 FOOTER = (ROOT / "partials" / "footer.html").read_text().rstrip("\n")
 BLOCK = re.compile(r'    <footer id="contact">.*?</footer>', re.S)
 OLD_CONTACT = ["andywhittaker@gmail.com", "From Andy Whittaker"]
+# The brand is DogwoofAI, one word, distinct from the original Dogwoof.
+BAD_BRAND = re.compile(r"Dogwoof[ -]+A[Ii]\b|Dogwoof%20AI")
 
 
 def pages():
@@ -40,6 +42,8 @@ def check():
         for old in OLD_CONTACT:
             if old in html:
                 problems.append(f"{page.name}: contains {old!r}")
+        for bad in BAD_BRAND.findall(html):
+            problems.append(f"{page.name}: unapproved brand spelling {bad!r}")
         for href in re.findall(r'href="(/[^"#?]*)', html):
             target = href.strip("/") or "index"
             if not ((ROOT / f"{target}.html").exists() or (ROOT / target).exists()):

@@ -1,6 +1,6 @@
-# dogwoof
+# DogwoofAI website
 
-Holding page for dogwoof.ai. Static HTML on Vercel, no build step.
+The public website for DogwoofAI, at dogwoof.ai. Static HTML on Vercel, no build step.
 
 - `index.html`: home
 - `intelligence.html`, `storyos.html`, `studio.html`, `originals.html`, `lab.html`, `impact.html`, `about.html`, `contact.html`, `privacy.html`: served at /intelligence, /storyos and so on
@@ -9,3 +9,7 @@ Holding page for dogwoof.ai. Static HTML on Vercel, no build step.
 - `vercel.json`: clean URLs and basic security headers
 
 Vercel: import this repo as its own project, then add dogwoof.ai under Settings → Domains (A record `@` → the address Vercel shows).
+
+## Brand name
+
+The brand is **DogwoofAI**, always one word (also `dogwoofai`, `DOGWOOFAI`), so the brand stays clearly distinct. Never write "Dogwoof AI", "Dogwoof Ai" or "Dogwoof-AI". The legal entity is Dogwoof Pte. Ltd.; the domain and email stay dogwoof.ai. `python3 scripts/footer.py --check` fails on the unapproved spellings.
