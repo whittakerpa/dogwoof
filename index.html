@@ -5,81 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>dogwoof.ai</title>
   <meta name="description" content="dogwoof.ai builds technology for independent storytellers: the capabilities of a studio for filmmakers the studios ignore, especially in Asia. Filmmakers keep ownership of their story.">
-  <style>
-    :root {
-      --bg: #faf7f2;
-      --fg: #191714;
-      --muted: #6e6860;
-      --rule: #e2dbd0;
-      --tile: #f1ebe1;
-      --accent: #c2532b;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #14120f;
-        --fg: #f1ece4;
-        --muted: #a39b90;
-        --rule: #2c2823;
-        --tile: #1e1b17;
-        --accent: #e8794f;
-      }
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; }
-    body {
-      background: var(--bg);
-      color: var(--fg);
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-      padding: 0 24px;
-    }
-    .wrap { max-width: 1080px; margin: 0 auto; width: 100%; }
-    nav { display: flex; justify-content: space-between; align-items: baseline; padding: 28px 0; font-size: 0.95rem; }
-    nav .logo { font-weight: 600; letter-spacing: -0.01em; }
-    nav .logo .dot, h1 .dot { color: var(--accent); }
-    nav a { color: var(--muted); text-decoration: none; margin-left: 20px; }
-    nav a:hover { color: var(--fg); }
-    header { padding: 12vh 0 64px; }
-    h1 {
-      font-family: ui-serif, Georgia, "Times New Roman", serif;
-      font-weight: 400;
-      font-size: clamp(2.4rem, 7vw, 5rem);
-      letter-spacing: -0.025em;
-      line-height: 1.02;
-      margin: 0 0 28px;
-      max-width: 14ch;
-    }
-    p.lede { font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.5; margin: 0; max-width: 46ch; color: var(--muted); }
-    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 0 0 72px; padding: 0; list-style: none; }
-    .grid li {
-      aspect-ratio: 1 / 1;
-      background: var(--tile);
-      border-radius: 6px;
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .grid .n { font-size: 0.8rem; color: var(--accent); font-variant-numeric: tabular-nums; }
-    .grid .t { font-family: ui-serif, Georgia, serif; font-size: clamp(1.1rem, 2vw, 1.5rem); line-height: 1.15; }
-    .grid .d { font-size: 0.85rem; line-height: 1.4; color: var(--muted); margin-top: 6px; }
-    section.parts { border-top: 1px solid var(--rule); padding: 32px 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .parts h2 { font-size: 1rem; font-weight: 600; margin: 0 0 8px; }
-    .parts p { margin: 0; font-size: 0.95rem; line-height: 1.5; color: var(--muted); }
-    footer { border-top: 1px solid var(--rule); padding: 28px 0 40px; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-    footer a { color: var(--accent); text-decoration: none; }
-    @media (max-width: 760px) {
-      .grid { grid-template-columns: repeat(2, 1fr); }
-      section.parts { grid-template-columns: 1fr; }
-      nav a { margin-left: 14px; }
-      header { padding: 8vh 0 48px; }
-    }
-  </style>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <div class="wrap">
     <nav>
-      <span class="logo">dogwoof<span class="dot">.</span>ai</span>
-      <span><a href="#what">What we do</a><a href="#contact">Contact</a></span>
+      <a class="logo" href="/">dogwoof<span class="dot">.</span>ai</a>
+      <span class="links"><a href="/storyos">StoryOS</a><a href="/originals">Originals</a><a href="/about">About</a><a href="#contact">Contact</a></span>
     </nav>
 
     <header>
@@ -87,7 +19,7 @@
       <p class="lede">The studios ignore most independent filmmakers, especially in Asia. We give them what a studio would provide. Filmmakers keep ownership of their story.</p>
     </header>
 
-    <ul class="grid" id="what" aria-label="What we provide">
+    <ul class="grid" aria-label="What we provide">
       <li><span class="n">01</span><div><div class="t">Verified research</div><div class="d">Sources, cited facts, timelines</div></div></li>
       <li><span class="n">02</span><div><div class="t">Development</div><div class="d">From true story to treatment</div></div></li>
       <li><span class="n">03</span><div><div class="t">Every format</div><div class="d">Feature, series, YouTube, vertical, cinema</div></div></li>
@@ -99,9 +31,9 @@
     </ul>
 
     <section class="parts">
-      <div><h2>StoryOS</h2><p>The AI system for true stories: research, verification, development and rights in one place.</p></div>
-      <div><h2>Dogwoof Originals</h2><p>Daily stories, evergreen stories and occasional films, made on StoryOS.</p></div>
-      <div><h2>Partners</h2><p>Data and AI for production and post companies, in systems they own.</p></div>
+      <div><h2><a href="/storyos">StoryOS</a></h2><p>The AI system for true stories: research, verification, development and rights in one place.</p></div>
+      <div><h2><a href="/originals">Dogwoof Originals</a></h2><p>Daily stories, evergreen stories and occasional films, made on StoryOS.</p></div>
+      <div><h2><a href="/about">How we work</a></h2><p>A small team with intelligence at the centre and storytellers at the edge.</p></div>
     </section>
 
     <footer id="contact">
