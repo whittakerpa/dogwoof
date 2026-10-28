@@ -110,6 +110,7 @@ footer a { color: var(--accent); text-decoration: none; }
   .grid.three li, .grid.stack li { aspect-ratio: auto; min-height: 150px; }
   .grid.stack { grid-template-columns: 1fr; }
   section.parts, section.parts.four, section.block { grid-template-columns: 1fr; }
+  footer { flex-direction: column; gap: 6px; }
   nav .links { column-gap: 14px; }
   header { padding: 8vh 0 48px; }
 }
