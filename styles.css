@@ -105,7 +105,8 @@ footer a { color: var(--accent); text-decoration: none; }
 @media (max-width: 760px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
   .grid.three { grid-template-columns: 1fr; }
-  .grid.three li { aspect-ratio: auto; min-height: 150px; }
+  .grid.three li, .grid.stack li { aspect-ratio: auto; min-height: 150px; }
+  .grid.stack { grid-template-columns: 1fr; }
   section.parts, section.parts.four, section.block { grid-template-columns: 1fr; }
   nav .links { column-gap: 14px; }
   header { padding: 8vh 0 48px; }
