@@ -70,6 +70,8 @@ section.manifesto p.sign { margin-top: 16px; max-width: none; font-family: inher
 }
 .grid .n { font-size: 0.8rem; color: var(--accent); font-variant-numeric: tabular-nums; }
 .grid .t { font-family: ui-serif, Georgia, serif; font-size: clamp(1.1rem, 2vw, 1.5rem); line-height: 1.15; }
+.grid .t a { color: inherit; text-decoration: none; }
+.grid .t a:hover { color: var(--accent); }
 .grid .d { font-size: 0.85rem; line-height: 1.4; color: var(--muted); margin-top: 6px; }
 
 section.block { border-top: 1px solid var(--rule); padding: 40px 0 56px; display: grid; grid-template-columns: 1fr 2fr; gap: 24px; }
