@@ -99,3 +99,4 @@ footer a { color: var(--accent); text-decoration: none; }
   nav .links { column-gap: 14px; }
   header { padding: 8vh 0 48px; }
 }
+section.block .body a { color: var(--accent); }

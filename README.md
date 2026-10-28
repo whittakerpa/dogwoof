@@ -3,7 +3,7 @@
 Holding page for dogwoof.ai. Static HTML on Vercel, no build step.
 
 - `index.html`: home
-- `storyos.html`, `originals.html`, `about.html`, `intelligence.html`, `impact.html`: served at /storyos, /originals, /about, /intelligence, /impact
+- `storyos.html`, `originals.html`, `about.html`, `intelligence.html`, `impact.html`, `privacy.html`: served at /storyos, /originals, /about, /intelligence, /impact, /privacy
 - `styles.css`: shared styles
 - `vercel.json`: clean URLs and basic security headers
 
