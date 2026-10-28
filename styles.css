@@ -50,6 +50,8 @@ h1 {
 p.lede { font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.5; margin: 0; max-width: 46ch; color: var(--muted); }
 p.lede + p.lede { margin-top: 14px; }
 p.lede .em { color: var(--fg); }
+p.actions { display: flex; flex-wrap: wrap; gap: 12px 28px; margin: 28px 0 0; }
+p.actions a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
 section.manifesto { border-top: 1px solid var(--rule); padding: 48px 0; }
 section.manifesto p { font-family: ui-serif, Georgia, serif; font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.3; letter-spacing: -0.01em; margin: 0; max-width: 28ch; }
 section.manifesto p.sign { margin-top: 16px; max-width: none; font-family: inherit; font-size: 1rem; color: var(--muted); }
@@ -86,6 +88,7 @@ ol.steps span { color: var(--muted); line-height: 1.5; }
 .labels li { font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid var(--rule); border-radius: 999px; padding: 6px 12px; }
 
 section.parts { border-top: 1px solid var(--rule); padding: 32px 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+section.parts.four { grid-template-columns: repeat(4, 1fr); }
 .parts h2 { font-size: 1rem; font-weight: 600; margin: 0 0 8px; }
 .parts h2 a { color: var(--fg); text-decoration: none; }
 .parts h2 a::after { content: " \2192"; color: var(--accent); }
@@ -93,6 +96,9 @@ section.parts { border-top: 1px solid var(--rule); padding: 32px 0; display: gri
 
 .cta { border-top: 1px solid var(--rule); padding: 48px 0 64px; }
 .cta p { font-family: ui-serif, Georgia, serif; font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.25; margin: 0 0 16px; max-width: 30ch; }
+.cta p.eyebrow { font-family: inherit; font-size: 0.8rem; margin: 0 0 12px; }
+.cta p.muted { font-family: inherit; font-size: 0.9rem; color: var(--muted); margin: 24px 0 0; }
+.cta p.actions { font-family: inherit; font-size: 1rem; line-height: 1.5; max-width: none; margin: 0; }
 .cta a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
 
 footer { border-top: 1px solid var(--rule); padding: 28px 0 40px; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
@@ -101,8 +107,9 @@ footer a { color: var(--accent); text-decoration: none; }
 @media (max-width: 760px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
   .grid.three { grid-template-columns: 1fr; }
-  .grid.three li { aspect-ratio: auto; min-height: 150px; }
-  section.parts, section.block { grid-template-columns: 1fr; }
+  .grid.three li, .grid.stack li { aspect-ratio: auto; min-height: 150px; }
+  .grid.stack { grid-template-columns: 1fr; }
+  section.parts, section.parts.four, section.block { grid-template-columns: 1fr; }
   nav .links { column-gap: 14px; }
   header { padding: 8vh 0 48px; }
 }
