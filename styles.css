@@ -96,6 +96,7 @@ section.parts.four { grid-template-columns: repeat(4, 1fr); }
 
 .cta { border-top: 1px solid var(--rule); padding: 48px 0 64px; }
 .cta p { font-family: ui-serif, Georgia, serif; font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.25; margin: 0 0 16px; max-width: 30ch; }
+.cta p.eyebrow { font-family: inherit; font-size: 0.8rem; margin: 0 0 12px; }
 .cta p.actions { font-family: inherit; font-size: 1rem; line-height: 1.5; max-width: none; margin: 0; }
 .cta a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
 
