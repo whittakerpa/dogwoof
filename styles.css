@@ -30,8 +30,8 @@ body {
 
 nav { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; padding: 28px 0; font-size: 0.95rem; }
 nav .logo { font-weight: 600; letter-spacing: -0.01em; color: var(--fg); text-decoration: none; }
-nav .links a { color: var(--muted); text-decoration: none; margin-left: 20px; }
-nav .links a:first-child { margin-left: 0; }
+nav .links { display: flex; flex-wrap: wrap; column-gap: 20px; row-gap: 6px; }
+nav .links a { color: var(--muted); text-decoration: none; }
 nav .links a:hover, nav .links a[aria-current="page"] { color: var(--fg); }
 
 header { padding: 12vh 0 64px; }
@@ -50,6 +50,7 @@ p.lede { font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.5; margin: 0; 
 .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 0 0 72px; padding: 0; list-style: none; }
 .grid.three { grid-template-columns: repeat(3, 1fr); }
 .grid li {
+  min-width: 0;
   aspect-ratio: 1 / 1;
   background: var(--tile);
   border-radius: 6px;
@@ -95,6 +96,7 @@ footer a { color: var(--accent); text-decoration: none; }
   .grid.three { grid-template-columns: 1fr; }
   .grid.three li { aspect-ratio: auto; min-height: 150px; }
   section.parts, section.block { grid-template-columns: 1fr; }
-  nav .links a { margin-left: 14px; }
+  nav .links { column-gap: 14px; }
   header { padding: 8vh 0 48px; }
 }
+section.block .body a { color: var(--accent); }
