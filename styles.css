@@ -28,8 +28,9 @@ body {
 .serif { font-family: ui-serif, Georgia, "Times New Roman", serif; }
 .dot { color: var(--accent); }
 
-nav { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; padding: 28px 0; font-size: 0.95rem; }
-nav .logo { font-weight: 600; letter-spacing: -0.01em; color: var(--fg); text-decoration: none; }
+nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; padding: 28px 0; font-size: 0.95rem; }
+nav .logo { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; letter-spacing: -0.01em; color: var(--fg); text-decoration: none; }
+nav .logo .mark { flex: none; }
 nav .links { display: flex; flex-wrap: wrap; column-gap: 20px; row-gap: 6px; }
 nav .links a { color: var(--muted); text-decoration: none; }
 nav .links a:hover, nav .links a[aria-current="page"] { color: var(--fg); }
