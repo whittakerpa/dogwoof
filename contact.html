@@ -29,11 +29,18 @@
       <p class="lede"><span class="em">We&rsquo;d like to hear from you.</span></p>
     </header>
 
-    <div class="cta">
-      <p><a href="mailto:comms@dogwoof.ai">comms@dogwoof.ai</a></p>
-      <p class="actions"><a href="mailto:comms@dogwoof.ai">Get in touch</a></p>
-      <p class="muted">DogwoofAI &middot; Singapore</p>
-    </div>
+    <form class="cta contact-form" id="form" action="/api/contact" method="post">
+      <label for="f-name">Name</label>
+      <input id="f-name" name="name" type="text" autocomplete="name" maxlength="200">
+      <label for="f-email">Email</label>
+      <input id="f-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+      <label for="f-message">Message</label>
+      <textarea id="f-message" name="message" rows="6" maxlength="5000" required></textarea>
+      <div class="hp" aria-hidden="true"><label for="f-website">Leave this empty</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+      <p class="actions"><button type="submit">Send</button></p>
+      <p class="status" role="status" aria-live="polite"></p>
+      <p class="muted">Or email <a href="mailto:comms@dogwoof.ai">comms@dogwoof.ai</a>. We use what you send only to reply. See our <a href="/privacy">privacy notice</a>.</p>
+    </form>
 
     <footer id="contact">
       <span>DogwoofAI &middot; Singapore</span>
@@ -42,5 +49,28 @@
     </footer>
   </div>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    (function () {
+      var form = document.getElementById('form');
+      var status = form.querySelector('.status');
+      var button = form.querySelector('button');
+      var q = location.search;
+      if (q.indexOf('sent=1') > -1) status.textContent = 'Thank you. Your message has been sent.';
+      if (q.indexOf('error=1') > -1) status.textContent = 'Your message could not be sent. Please email comms@dogwoof.ai.';
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        button.disabled = true;
+        status.textContent = 'Sending\u2026';
+        fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' }, body: new URLSearchParams(new FormData(form)) })
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            if (d.ok) { form.reset(); status.textContent = 'Thank you. Your message has been sent.'; }
+            else status.textContent = d.error;
+          })
+          .catch(function () { status.textContent = 'Your message could not be sent. Please email comms@dogwoof.ai.'; })
+          .then(function () { button.disabled = false; });
+      });
+    })();
+  </script>
 </body>
 </html>
