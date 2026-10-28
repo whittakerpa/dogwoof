@@ -117,3 +117,16 @@ footer a { color: var(--accent); text-decoration: none; }
   header { padding: 8vh 0 48px; }
 }
 section.block .body a { color: var(--accent); }
+
+.contact-form { display: grid; gap: 6px; max-width: 560px; }
+.contact-form label { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+.contact-form input, .contact-form textarea { font: inherit; font-size: 1rem; color: var(--fg); background: var(--bg); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; width: 100%; }
+.contact-form textarea { resize: vertical; min-height: 140px; }
+.contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+.contact-form p.actions { margin-top: 18px; }
+.contact-form button { font: inherit; font-size: 1rem; color: var(--bg); background: var(--fg); border: 0; border-radius: 6px; padding: 10px 22px; cursor: pointer; }
+.contact-form button:disabled { opacity: 0.6; cursor: default; }
+.contact-form p.status { font-family: inherit; font-size: 1rem; margin: 8px 0 0; min-height: 1.5em; }
+.contact-form .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.contact-form label:first-child { margin-top: 0; }
+.contact-form p { max-width: none; }
