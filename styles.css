@@ -88,6 +88,7 @@ ol.steps span { color: var(--muted); line-height: 1.5; }
 .labels li { font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid var(--rule); border-radius: 999px; padding: 6px 12px; }
 
 section.parts { border-top: 1px solid var(--rule); padding: 32px 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+section.parts.four { grid-template-columns: repeat(4, 1fr); }
 .parts h2 { font-size: 1rem; font-weight: 600; margin: 0 0 8px; }
 .parts h2 a { color: var(--fg); text-decoration: none; }
 .parts h2 a::after { content: " \2192"; color: var(--accent); }
@@ -104,7 +105,7 @@ footer a { color: var(--accent); text-decoration: none; }
   .grid { grid-template-columns: repeat(2, 1fr); }
   .grid.three { grid-template-columns: 1fr; }
   .grid.three li { aspect-ratio: auto; min-height: 150px; }
-  section.parts, section.block { grid-template-columns: 1fr; }
+  section.parts, section.parts.four, section.block { grid-template-columns: 1fr; }
   nav .links { column-gap: 14px; }
   header { padding: 8vh 0 48px; }
 }
